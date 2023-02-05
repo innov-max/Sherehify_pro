@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_to"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.innov.sherehify.fragments.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_verification"
+            app:destination="@id/verification" />
+    </fragment>
+    <fragment
+        android:id="@+id/verification"
+        android:name="com.innov.sherehify.fragments.Verification"
+        android:label="fragment_verification"
+        tools:layout="@layout/fragment_verification" >
+        <action
+            android:id="@+id/action_verification_to_otpSend"
+            app:destination="@id/otpSend" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpSend"
+        android:name="com.innov.sherehify.fragments.otpSend"
+        android:label="fragment_otp_send"
+        tools:layout="@layout/fragment_otp_send" />
+</navigation>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/splash_background"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/man"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:fontFamily="@font/baloo"
+        android:textSize="25sp"
+        android:text="Enter the Otp sent to you"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"/>
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:foregroundGravity="center"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/splash_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.mukesh.mukeshotpview.mukeshOtpView.MukeshOtpView
+                android:id="@+id/inBuildRectangleOtpView"
+                android:layout_width="323dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:inputType="number"
+                android:text="124356"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:hideLineWhenFilled="false"
+                app:itemCount="6"
+                app:lineColor="@android:color/holo_red_light"
+                app:state_filled="true"
+                app:viewType="rectangle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_background"
+                android:text="Continue"
+                android:layout_marginTop="20dp"
+                android:id="@+id/btnOtpContinue"/>
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
